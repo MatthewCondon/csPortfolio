@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+ <link rel="stylesheet"type="text/css"href="../css/style.css">
+	<link rel="stylesheet"type="text/css"href="../css/faces.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/faces.css">
+     
+     <script src="https://toolness.github.io/p5.js-widget/p5-widget.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    
+    
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<img id="bannerimg" src="../pictures/home_banner.jpg" alt="Skyline photo of New York City taken from the top of the One World Trade Center"width="1307">
+  <hr>
+      <br>
+    <h1 class="title"> CSA Project - Faces </h1>
+      <br>
+      <br>
+  <hr>
+<br>
+    <nav id="main-nav">
+      <ul>
+          <li>
+              <a href="../index.html">Home</a>
+          </li>
+          <li>
+              <a href="#">Projects
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                 <li>
+                     <a href="#">CSA Projects<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="snowflake.html">Happy Holidays!</a>
+                          </li>
+                          <li>
+                              <a href="faces.html">face.random()</a>
+                          </li>
+                          <li>
+                              <a href="bar.html">Raise the Bar</a>
+                          </li>
+                          <li>
+                              <a href="clock.html">Time to Wake Up</a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li>
+                     <a href="#">ACS Projects<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+
+          
+<li>
+              <a href="#">About Me
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                  <li>
+                      <a href="about_Me.html">Background</a>
+                  </li>
+                  <li>
+                      <a href="my_CSK.html">Comp Sci</a>
+                  </li>
+                  <li>
+                      <a href="my_Plans.html">Plans</a>
+                  </li>
+                  <li>
+                      <a href="resume.html">Resume</a>
+                  </li>
+
+                  <li>
+                      
+                     <a href="#">Extras<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="blog.html">Blog</a>
+                          </li>
+                          <li>
+                              <a href="csa_notes.html"> CSA Notebooks</a>
+                          </li>
+                          <li>
+                              <a href="acs_notes.html">ACS Notebooks</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+
+                    <li>
+              <a href="#">Resources
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                  <li>
+                      <a href="https://p5js.org/reference/">P5 API</a>
+                  </li>
+                  <li>
+                      <a href="https://processing.org/">Processing</a>
+                  </li>
+                  <li>
+                      <a href="contact_me.html">Contact Me</a>
+                  </li>
+              </ul>
+          </li>
+          
+
+                    <li>
+                        <a href="deep_thoughts.html">Thoughts</a>
+          </li>
+      </ul>
+  </nav>
+
+    <!--/menu-->
+    <br>
+  <hr>
+
+
+
+
+  <h1 style="font-size:35px; color:#353D40; font-family: 'Noto Serif Display', serif;">face.random()</h1>
+
+              <div class="flexbox-item item-2"><br> <h1 style="font-size:20px; color:#353D40; font-family: 'Noto Serif Display', serif; line-height:1.4">When we began using p5js last year, this was one of the first projects we made. The aim of this was to construct differnet faces with different eye colors, mouths, and shapes. The pupils also move around. <br><br> The most challenging part was synchronizing the pupils and face shapes, while making the mouths change to different sizes. All of this would happen in the same time interval too. I also found it challenging to make the pupils move around the eye back and forth. Have a look around and change the pupil speed, random eye color, and face sizes. If you click on the screen, the changes occur even faster. Enjoy!</h1><br>
+            </div> <br>
+            
+    
+            <script type="text/p5" data-height="500" data-autoplay data-preview-width="900">
+
+            var xPos;
+var yPos;
+var scaleW;
+var scaleH;
+
+var r = 20;
+var g = 100;
+var b = 200;
+var a = 0.0;
+var s = 2.0;
+var t = 0;
+var faces = [];
+var fruitMax = 3;
+
+let fruits = ["🍒", "🍑", "🍓", "🍋"];
+var index = 0;
+
+function setup() {
+  createCanvas(560, 400);
+  angleMode(DEGREES);
+
+  xPos = 20;
+  yPos = 35;
+  scaleW = random(40, 70);
+  scaleH = random(80, 110);
+
+  var index = 0;
+  for (var i = 0; i < 16; i++) {
+    faces[index] = new Face(xPos, yPos);
+    xPos += 40;
+    if (xPos > width - 200) {
+      xPos = 20;
+      yPos += 105;
+    }
+    index++;
+  }
+}
+
+function draw() {
+  //background(150);
+  textSize(12);
+  background(220);
+  //scale(6.5);
+  //for (var i = 0; i < 4; i++) {
+    //text(fruits[index], 30, 30);
+  text(mouseX + " " + mouseY, 60, 15);
+
+  for (var i = 0; i < 16; i++) {
+    faces[i].head();
+    faces[i].speak();
+  }
+
+  if (frameCount % 24 == 0) {
+    r = floor(random(20, 255));
+    g = floor(random(20, 255));
+    b = floor(random(20, 255));
+    scaleW = random(40, 90);
+    scaleH = random(80, 130);
+    for (var i = 0; i < 16; i++) {
+      faces[i].setMouth(random(scaleH * 0.33), random(scaleW * 0.23));
+    }
+  }
+}
+
+class Face {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.s = random(scaleW * 0.33);
+    this.t = random(scaleW * 0.33);
+    this.c = color(255, 150, 20);
+    //this.fruitMax=random(0,3);
+  }
+
+  speak() {
+    //mouth
+    push();
+    translate(this.x, this.y, this.s);
+    stroke(0, 0, 0);
+    fill(255, 255, 255);
+    ellipse(this.x, this.y + 0.2 * scaleH, this.s, this.t);
+    //ellipse(random(20,100),random(20,100), this.s, this.t));
+    pop();
+  }
+
+  head() {
+    push();
+    translate(this.x, this.y, this.s);
+    //face shape
+    //scale(s);
+    fill(130);
+    ellipse(this.x, this.y, scaleW, scaleH);
+    //eyes
+
+    fill(r, g, b);
+    ellipse(
+      this.x - 0.13 * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.23,
+      scaleH * 0.09
+    );
+
+    fill(0, 0, 0);
+    ellipse(
+      this.x - random(0.1, 0.2) * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.05,
+      scaleH * 0.06
+    );
+
+    fill(r + 55, g + 55, b + 55);
+    ellipse(
+      this.x + 0.13 * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.23,
+      scaleH * 0.09
+    );
+
+    fill(0, 0, 0);
+    ellipse(
+      this.x + random(0.1, 0.2) * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.05,
+      scaleH * 0.06
+    );
+    pop();
+  }
+  setMouth(s, t) {
+    this.s = s;
+    this.t = t;
+  }
+}
+
+function mousePressed() {
+  r = random(0, 255);
+  g = random(0, 255);
+  b = random(0, 255);
+  //s = floor(random(0.25, 1.0));
+  //s = floor(random(scaleW * 0.43));
+  //t = floor(random(scaleH * 0.23));
+  scaleW = random(40, 90);
+  scaleH = random(80, 130);
+  s = random(10, 90);
+  t = random(10, 90);
+  index++;
+  loop();
+}
+
+
+</script>
+
+            </div>
+
+  <br><hr>
+
+
+  <div id="sketch-div"></div>
+
+  </body>
+  
+</html>

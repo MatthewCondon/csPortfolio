@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+
+     
+     <script src="https://toolness.github.io/p5.js-widget/p5-widget.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+
+    
+ <link rel="stylesheet"type="text/css"href="../css/style.css">
+	<link rel="stylesheet"type="text/css"href="../css/bar.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bar.css">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<img id="bannerimg" src="../pictures/home_banner.jpg" alt="Skyline photo of New York City taken from the top of the One World Trade Center"width="1307">
+  <hr>
+      <br>
+    <h1 class="title"> CSA Project - Game </h1>
+      <br>
+      <br>
+  <hr>
+<br>
+    <nav id="main-nav">
+      <ul>
+          <li>
+              <a href="../index.html">Home</a>
+          </li>
+          <li>
+              <a href="about_Me.html">Projects
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                 <li>
+                     <a href="#">CSA Projects<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="snowflake.html">Happy Holidays!</a>
+                          </li>
+                          <li>
+                              <a href="faces.html">face.random()</a>
+                          </li>
+                          <li>
+                              <a href="bar.html">Raise the Bar</a>
+                          </li>
+                          <li>
+                              <a href="clock.html">Time to Wake Up</a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li>
+                     <a href="#">ACS Projects<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+
+          
+<li>
+              <a href="#">About Me
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                  <li>
+                      <a href="about_Me.html">Background</a>
+                  </li>
+                  <li>
+                      <a href="my_CSK.html">Comp Sci</a>
+                  </li>
+                  <li>
+                      <a href="my_Plans.html">Plans</a>
+                  </li>
+                  <li>
+                      <a href="resume.html">Resume</a>
+                  </li>
+
+                  <li>
+                      
+                     <a href="#">Extras<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="blog.html">Blog</a>
+                          </li>
+                          <li>
+                              <a href="csa_notes.html"> CSA Notebooks</a>
+                          </li>
+                          <li>
+                              <a href="acs_notes.html">ACS Notebooks</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+
+                    <li>
+              <a href="#">Resources
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                  <li>
+                      <a href="https://p5js.org/reference/">P5 API</a>
+                  </li>
+                  <li>
+                      <a href="https://processing.org/">Processing</a>
+                  </li>
+                  <li>
+                      <a href="contact_me.html">Contact Me</a>
+                  </li>
+              </ul>
+          </li>
+          
+
+                    <li>
+                        <a href="deep_thoughts.html">Thoughts</a>
+          </li>
+      </ul>
+  </nav>
+
+    <!--/menu-->
+    <br>
+  <hr>
+
+
+  <h1>Raise The Bar!</h1>
+
+              <div class="flexbox-item item-2"><br> <a>I made this game last year after I concluded my Clock Project. The aim of this game is to tap your mouse as fast as possible and (1) Make the L switch to a W by getting to the end first and (2) Get to the end so in the lowest time possible. The high score is 6 seconds for the win. <br><br> The most challenging part about this project was making the bar move in a consistent motion. In the initial stages, the bar would appear at a distance, disappear, and reappear at a new distance. Other than that, it was not too difficult to code. Feel free to change the frameCount variable to make the computer move its bar faster or slower. Have fun!</a>
+            </div>
+            <br>
+    
+            <script type="text/p5" data-height="500" data-autoplay data-preview-width="900">
+
+
+
+var xPosMax = 600;
+
+//computer variables
+var comXPos = 0;
+var comYPos = 0;
+var counts = [];
+var xPos = 0;
+var ypos = 0;
+var scored = false;
+var won = false;
+var on = false;
+var index = 0;
+
+var score = 0;
+
+//speed options
+//var rando1 = random(5,20);
+
+//user variables
+
+function setup() {
+  createCanvas(800, 200);
+  rando1 = random(5, 20);
+}
+
+function draw() {
+  design();
+  game();
+  scoring();
+}
+
+function design() {
+  background(150, 150, 250);
+
+  //border
+  stroke(64);
+  noFill();
+  strokeWeight(20);
+  rect(0, 0, 800, 200);
+  rect(120, 0, 5, 200);
+
+  //score bit
+  strokeWeight(1);
+  textSize(20);
+  fill(64);
+  text("Score:", 30, 50);
+  if (frameCount % 60 == 0) score++;
+  text(score, 50, 70);
+  textSize(100);
+  if (won) text("W", 15, 150);
+  else text("L", 30, 150);
+  stroke(204, 0, 0);
+  if (on) {
+    //rectMode(CENTER);
+    fill(76, 0, 153);
+    stroke(76, 0, 153);
+    rect(135, 40, comXPos, 50);
+    fill(204, 0, 0);
+    stroke(204, 0, 0);
+    rect(135, 110, xPos, 50);
+  }
+}
+
+function game() {
+  //computer
+  if (frameCount % 10 == 0) {
+    on = true;
+    comXPos = comXPos + 10;
+  }
+
+  //user
+  if (index > 0) {
+    on = true;
+    xPos = xPos + 10;
+    index = 0;
+  }
+}
+
+function scoring() {
+  if (comXPos == 700 && xPos < comXPos) {
+    won = false;
+  } else if (xPos == 700 && xPos > comXPos) {
+    won = true;
+  }
+}
+
+function mousePressed() {
+  index++;
+}
+
+
+
+
+
+
+</script>
+
+            </div>
+
+
+  <div id="sketch-div"></div>
+
+  </body>
+  
+</html>
