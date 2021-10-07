@@ -1,0 +1,387 @@
+body {
+			background-color: #D9D9D9;
+		}
+
+		a {
+			font-size: 20px;
+			color: #003F63;
+			text-decoration: none;
+			font-family: 'Noto Serif Display', serif;
+		}
+
+		.title {
+			text-align: center;
+			font-family: 'Noto Serif Display', serif;
+			color: #003F63;
+		}
+
+		#bannerimg {
+			width: 100%;
+		}
+
+hr{
+      border-top: 10px solid #003F63;
+      border-radius: 2px;
+    }
+
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			text-align: center;
+		}
+
+		#pageimg {
+			border: 5px solid #353D40;
+			width: 300px;
+			display: block;
+			margin-left: auto;
+			margin-right: 70%;
+			margin-top: 2%;
+			padding: 1%;
+		}
+
+		.flex-container9 {
+			display: flex;
+			flex-direction: row;
+			line-height: 1;
+		}
+
+		h1 {
+			font-family: 'Noto Serif Display', serif;
+			color: #353D40;
+		}
+    h2{
+      font-family: 'Noto Serif Display', serif;
+			color: #353D40;
+    }
+
+    .welcome{
+      font-family: 'Noto Serif Display', serif;
+			color: #353D40;
+      text-align: center;
+    }
+
+
+		.flex-container1 {
+			flex-grow: 1;
+      
+      display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container1:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    	.flex-container2 {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container2:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    	.flex-container3 {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container3:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    	.flex-container4 {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container4:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    	.flex-container5 {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container5:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    	.flex-container6 {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container6:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    	.flex-container7 {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container7:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    	.flex-container8 {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+      width: 125px;
+      height: 30px;
+
+      background: #A1A5A6;
+      margin: 10px;
+      border-radius: 15px;
+		}
+
+    .flex-container8:hover{
+      background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    }
+
+    .flex-container9 {
+			display: flex;
+			flex-direction: row;
+			line-height: 1;
+		}
+
+
+
+
+    /* Menu Dropdown! please use div */
+.dropdown{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    text-align: center;
+			font-family: 'Noto Serif Display', serif;
+			color: #003F63;
+}
+.dropdown > .dropdown-sub{
+    display: none;
+    background-color: #F2B138;
+      transform: scale(1.03);
+      transition: all 1s ease;
+    flex-direction: column;
+}
+.dropdown:hover > .dropdown-sub {
+    display: flex;
+}.dropdown:hover > .dropdown-sub  > .dropdown-option:hover{
+    background-color: #F2B138;
+    transform: scale(1.03);
+      transition: all 1s ease;
+}
+    		body {
+			background-color: #D9D9D9;
+		}
+
+		hr {
+			border-top: 10px solid #003F63;
+			border-radius: 2px;
+		}
+
+		a {
+			font-size: 20px;
+			color: #003F63;
+			text-decoration: none;
+			font-family: 'Noto Serif Display', serif;
+		}
+
+		.title {
+			text-align: center;
+			font-family: 'Noto Serif Display', serif;
+			color: #003F63;
+		}
+
+		#bannerimg {
+			width: 100%;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			text-align: center;
+		}
+
+
+#main-nav {
+    margin-top: 2px;
+    padding: 0px;
+    
+}
+
+#main-nav a {
+    color: #003F63;
+    background: #A1A5A6;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Noto Serif Display', serif;
+    text-transform: uppercase;
+    font-size: 21px;
+    
+    transition: background 0.4s;
+    transform: scale(1.03);
+    border-radius: 20px;
+    
+     text-align:center;
+}
+
+#main-nav a:hover {
+    background-color: #F2B138;
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+#main-nav li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-right:20px;
+    margin-left: 20px;
+
+}
+
+#main-nav li:hover .submenu > li {
+    display: block;
+    flex-direction: column;
+    top: 0px;
+    
+}
+
+.submenu li {
+    display: none;
+    position: absolute;
+    top: 0px;
+    margin-top: 10px;
+    right: 8%
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+.submenu li {
+    position: relative;
+    margin-right:20px;
+    margin-left: 20px;
+}
+
+.submenu li:hover .submenu-2 li {
+    
+    display: block;
+}
+
+.submenu-2 li {
+    display: none;
+    margin-right:20px;
+    margin-left: 20px;
+}
+
+.submenu-2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -9px;
+    left: 105%;
+    width: 250px;
+}
+
+.arrow {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+		.resumeimg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}

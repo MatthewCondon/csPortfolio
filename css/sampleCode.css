@@ -1,0 +1,101 @@
+		.dropdown {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+
+		.dropdown {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+			width: 125px;
+			height: 30px;
+
+			background: #A1A5A6;
+			margin: 10px;
+			border-radius: 15px;
+		}
+
+
+		.dropdown>.dropdown-title {
+			background-color: #F2B138;
+			transform: scale(1.03);
+			transition: all 1s ease;
+			margin: 10px;
+			border-radius: 15px;
+			justify-content: 10px;
+		}
+
+
+		.dropdown>.dropdown-sub {
+			background-color: #F2B138;
+			z-index: 1;
+			flex-direction: row;
+			background-color: #F2B138;
+			transform: scale(1.03);
+			transition: all 1s ease;
+			margin: 10px;
+			border-radius: 15px;
+			justify-content: space-between;
+		}
+
+		.dropdown:hover>.dropdown-sub {
+			display: flex;
+			background-color: #F2B138;
+			transform: scale(1.03);
+			transition: all 1s ease;
+			margin: 10px;
+			border-radius: 15px;
+			justify-content: space-between;
+		}
+
+		.dropdown:hover>.dropdown-sub>.dropdown-option:hover {
+			background-color: #F2B138;
+			transform: scale(1.03);
+			transition: all 1s ease;
+			justify-content: space-between;
+			border-radius: 15px;
+		}
+
+
+		.flex-container8:hover {
+			background-color: #F2B138;
+			transform: scale(1.03);
+			transition: all 1s ease;
+		}
+
+
+
+
+
+
+                <div class="flex-container">
+        
+        <div class="flex-container1" style="flex-grow: 1"><a href=../index.html>Home</a></div>
+
+        <div class="flex-container2" style="flex-grow: 1"><a href=pages/about_Me.html>About Me</a></div>
+
+
+        <div class="dropdown" style="background-color:#aaa";>
+          <div class="dropdown-title" style="background-color:#A1A5A6;"><a>Projects</font></div>
+          <div class="dropdown-sub" style="background-color: #A1A5A6;">
+          <div class="dropdown-option"><a href=pages/csa_projects.html> A.P. Computer Science A Projects</div>
+          <div class="dropdown-option"><a href=pages/acs_projects.html>Advanced Computer Science Projects</div>
+         </div>
+        </div>
+
+        <div class="flex-container4" style="flex-grow: 1"><a href=pages/my_CSK.html>What I Know</a></div>
+
+        <div class="flex-container5" style="flex-grow: 1"><a href=pages/my_Plans.html>Future Plans</a></div>
+
+        <div class="flex-container6" style="flex-grow: 1"><a href=pages/resume.html>Resume</a></div>
+
+        <div class="flex-container7" style="flex-grow: 1"><a href=pages/deep_thoughts.html>Thoughts</a></div>
+
+        <div class="flex-container8" style="flex-grow: 1"><a href=pages/contact_me.html>Contact Me</a></div>
+
+
+      
+    </div>
+</div>
