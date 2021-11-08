@@ -65,10 +65,26 @@
                       </a>
                       <ul class="submenu-2">
                           <li>
-                              <a href="#">Not Available</a>
+                              <a href="scaled.html">Scaled Projects</a>
+                          </li>
+                          <li>
+                              <a href="dice.html">Dice Project</a>
                           </li>
                           <li>
                               <a href="#">Not Available</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                     <a href="#">My Own Interests<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="solarsystem.html">Solar System</a>
+                          </li>
+                          <li>
+                              <a href="jack.html">Jack O' Lanterns</a>
                           </li>
                           <li>
                               <a href="#">Not Available</a>
@@ -150,7 +166,7 @@
 
   <h1 style="font-size:35px; color:#353D40; font-family: 'Noto Serif Display', serif;">face.random()</h1>
 
-              <div class="flexbox-item item-2"><br> <h1 style="font-size:20px; color:#353D40; font-family: 'Noto Serif Display', serif; line-height:1.4">When we began using p5js last year, this was one of the first projects we made. The aim of this was to construct differnet faces with different eye colors, mouths, and shapes. The pupils also move around. <br><br> The most challenging part was synchronizing the pupils and face shapes, while making the mouths change to different sizes. All of this would happen in the same time interval too. I also found it challenging to make the pupils move around the eye back and forth. Have a look around and change the pupil speed, random eye color, and face sizes. If you click on the screen, the changes occur even faster. Enjoy!</h1><br>
+              <div class="flexbox-item item-2"><br> <h1 style="font-size:20px; color:#353D40; font-family: 'Noto Serif Display', serif; line-height:1.4">When we began using p5js last year, this was one of the first projects we made. This is the better version. The first version can be found below.The aim of this was to construct differnet faces with different eye colors, mouths, and shapes. The pupils also move around. <br><br> The most challenging part was synchronizing the pupils and face shapes, while making the mouths change to different sizes. All of this would happen in the same time interval too. I also found it challenging to make the pupils move around the eye back and forth. Have a look around and change the pupil speed, random eye color, and face sizes. If you click on the screen, the changes occur even faster. Enjoy!</h1><br>
             </div> <br>
             
     
@@ -303,6 +319,207 @@ function mousePressed() {
   index++;
   loop();
 }
+
+
+</script>
+
+<br><br>
+
+ <h1 style="font-size:35px; color:#353D40; font-family: 'Noto Serif Display', serif;">Faces and Strawberries</h1>
+
+              <div class="flexbox-item item-2"><br> <h1 style="font-size:20px; color:#353D40; font-family: 'Noto Serif Display', serif; line-height:1.4">This is oen my starter projects with the faces last year. It was very challenging, but that may be due to the fact that I did not really know what I was doing at this point. The faces are random and the strawberries will usually go as far as the faces do across the screen. The characteristics of the face change with time, the amount of faces and strawberries change as you click the screen.
+                <br><br> I hope you understand that this is a very primitive version of the better faces project. I also was no entirely sure how p5js worked at this point.
+                <br><br> To start, just click the screen. Aside from all that, I hope you enjoy it!</h1><br>
+            </div> <br>
+            
+    
+            <script type="text/p5" data-height="500" data-autoplay data-preview-width="900">
+
+var xPos;
+var yPos;
+var scaleW;
+var scaleH;
+
+var r = 20;
+var g = 100;
+var b = 200;
+var a = 0.0;
+var s = 2.0;
+var t = 0;
+var faces = [];
+var fruitMax = 3;
+
+let fruits = ["🍒", "🍑", "🍓", "🍋"];
+var index = 0;
+var rando;
+var rand02;
+var check = 0;
+
+var f = 2;
+var rand02check = rand02+1;
+
+function setup() {
+  createCanvas(560, 220);
+  angleMode(DEGREES);
+
+  xPos = 20;
+  yPos = 35;
+  scaleW = random(40, 70);
+  scaleH = random(80, 110);
+
+  var index = 0;
+  for (var i = 0; i < 16; i++) {
+    faces[index] = new Face(xPos, yPos);
+    xPos += 40;
+    if (xPos > width - 200) {
+      xPos = 20;
+      yPos += 105;
+    }
+    index++;
+  }
+}
+
+function draw() {
+  //background(150);
+  textSize(70);
+  background(220);
+
+  for (var i = 0; i < rando; i++) {
+    faces[i].head();
+    faces[i].speak();
+  }
+rand02 = random(0, fruits.length);
+  //while(check<rando){
+  for (var j = 2; j < 3; j++) {
+    xPos = 10;
+    while (xPos < rando * 100 - 30) {
+      //while(f<5){ // comment out here in not working
+      text(fruits[j], xPos, 200);
+      xPos += 70;
+      //f++;// comment out here in not working
+      //j++;// comment out here in not working
+      console.log("working");
+      //}// comment out here in not working
+    }
+    //xPos=0;
+  }
+  //while(check<rando){
+  //text(fruits[j],xPos,200);
+  //xPos+=50;
+  //check++;
+  //}
+  /*
+    if(rando==1){
+      text(fruits[j],15,200)
+    } else if(rando==2){
+      text(fruits[j],45,200)
+    } else if(rando==3){
+      text(fruits[j],75,200)
+    } else if(rando==4){
+      text(fruits[j],105,200)
+    } else if (rando==5){
+      text(fruits[j],135,200)
+    } else if (rando==6){
+      text(fruits[j],175,200)
+    } else if (rando==7){
+      text(fruits[j],205,200)
+    } else
+        check=check;
+  }*/
+  //check++;
+  //}
+
+  if (frameCount % 60 == 0) {
+    r = floor(random(20, 255));
+    g = floor(random(20, 255));
+    b = floor(random(20, 255));
+    scaleW = random(40, 90);
+    scaleH = random(80, 130);
+  }
+  // rando = random(1, 7);
+}
+
+class Face {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.s = random(scaleW * 0.33);
+    this.t = random(scaleW * 0.33);
+    this.c = color(255, 150, 20);
+  }
+
+  speak() {
+    //mouth
+    push();
+    translate(this.x, this.y, this.s);
+    stroke(0, 0, 0);
+    fill(255, 255, 255);
+    ellipse(this.x, this.y + 0.2 * scaleH, this.s, this.t);
+    pop();
+  }
+
+  head() {
+    push();
+    translate(this.x, this.y, this.s);
+    //face shape
+    //scale(s);
+    fill(130);
+    ellipse(this.x, this.y, scaleW, scaleH);
+    //eyes
+
+    fill(r, g, b);
+    ellipse(
+      this.x - 0.13 * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.23,
+      scaleH * 0.09
+    );
+
+    fill(0, 0, 0);
+    ellipse(
+      this.x - random(0.1, 0.2) * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.05,
+      scaleH * 0.06
+    );
+
+    fill(r + 55, g + 55, b + 55);
+    ellipse(
+      this.x + 0.13 * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.23,
+      scaleH * 0.09
+    );
+
+    fill(0, 0, 0);
+    ellipse(
+      this.x + random(0.1, 0.2) * scaleW,
+      this.y - scaleH * 0.15,
+      scaleW * 0.05,
+      scaleH * 0.06
+    );
+    pop();
+  }
+  setMouth(s, t) {
+    this.s = s;
+    this.t = t;
+  }
+}
+
+function mousePressed() {
+  r = random(0, 255);
+  g = random(0, 255);
+  b = random(0, 255);
+  scaleW = random(40, 90);
+  scaleH = random(80, 130);
+  s = random(10, 90);
+  t = random(10, 90);
+  index++;
+  rando = random(1, 7);
+  rand02 = random(0, fruits.length);
+  loop();
+}
+
 
 
 </script>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/faces.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/faces.css">
+
+	<script src="https://toolness.github.io/p5.js-widget/p5-widget.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js">
+	</script>
+
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<img id="bannerimg" src="../pictures/home_banner.jpg" alt="Skyline photo of New York City taken from the top of the One World Trade Center"width="1307">
+  <hr>
+      <br>
+    <h1 class="title"> ACS Projects - Scaled Variables </h1>
+      <br>
+      <br>
+  <hr>
+<br>
+    <nav id="main-nav">
+      <ul>
+          <li>
+              <a href="../index.html">Home</a>
+          </li>
+          <li>
+              <a href="#">Projects
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                 <li>
+                     <a href="#">CSA Projects<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="snowflake.html">Happy Holidays!</a>
+                          </li>
+                          <li>
+                              <a href="faces.html">face.random()</a>
+                          </li>
+                          <li>
+                              <a href="bar.html">Raise the Bar</a>
+                          </li>
+                          <li>
+                              <a href="clock.html">Time to Wake Up</a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li>
+                     <a href="#">ACS Projects<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="scaled.html">Scaled Projects</a>
+                          </li>
+                          <li>
+                              <a href="dice.html">Dice Project</a>
+                          </li>
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                     <a href="#">My Own Interests<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="solarsystem.html">Solar System</a>
+                          </li>
+                          <li>
+                              <a href="jack.html">Jack O' Lanterns</a>
+                          </li>
+                          <li>
+                              <a href="#">Not Available</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+
+          
+<li>
+              <a href="#">About Me
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                  <li>
+                      <a href="about_Me.html">Background</a>
+                  </li>
+                  <li>
+                      <a href="my_CSK.html">Comp Sci</a>
+                  </li>
+                  <li>
+                      <a href="my_Plans.html">Plans</a>
+                  </li>
+                  <li>
+                      <a href="resume.html">Resume</a>
+                  </li>
+
+                  <li>
+                      
+                     <a href="#">Extras<span class="arrow">&#x25B6;  </span>  </a>
+                         
+                      </a>
+                      <ul class="submenu-2">
+                          <li>
+                              <a href="blog.html">Blog</a>
+                          </li>
+                          <li>
+                              <a href="csa_notes.html"> CSA Notebooks</a>
+                          </li>
+                          <li>
+                              <a href="acs_notes.html">ACS Notebooks</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+
+                    <li>
+              <a href="#">Resources
+                  <span class="arrow">&#x25BC;</span>
+              </a>
+              <ul class="submenu">
+                  <li>
+                      <a href="https://p5js.org/reference/">P5 API</a>
+                  </li>
+                  <li>
+                      <a href="https://processing.org/">Processing</a>
+                  </li>
+                  <li>
+                      <a href="contact_me.html">Contact Me</a>
+                  </li>
+              </ul>
+          </li>
+          
+
+                    <li>
+                        <a href="deep_thoughts.html">Thoughts</a>
+          </li>
+      </ul>
+  </nav>
+
+    <!--/menu-->
+    <br>
+  <hr>
+
+
+
+
+  <h1 style="font-size:35px; color:#353D40; font-family: 'Noto Serif Display', serif;">Proportions by Canvas Size</h1>
+
+              <h1 style="font-size:20px; color:#353D40; font-family: 'Noto Serif Display', serif; line-height:1.4"><br>This was the first proportional project I attempted. In this one, I made a disco ball. The background was relateivly simple, as that just required random values for r, g, and b that switched every half-second. The biggest challenge with this project were the lines in the disco ball to give it that typical texture. If you look at the code, you will see that the values being multiplied by X are going into the decimal ranges. Some of that was in part due to calculation, some was by trial and error. 
+              <br><br>Please feel free to change the canvas size on line 8. It can be a perfect square or a rectangle with different lengths.
+              <br><br>Have fun and enjoy the party!
+            </h1> <br>
+            
+    
+            <script type="text/p5" data-height="500" data-autoplay data-preview-width="500">
+//disco ball proportions dependent upon canvas size
+
+var r;
+var g;
+var b;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  backgroundColor();
+  discoBall();
+}
+
+function backgroundColor() {
+  if (frameCount % 30 === 0) {
+    r = random(255);
+    g = random(255);
+    b = random(255);
+  }
+  background(r, g, b);
+}
+
+function discoBall() {
+  strokeWeight(5);
+  stroke(0);
+  line(width / 2, 0, width / 2, height / 2);
+  fill(181, 181, 181);
+  ellipse(width / 2, height / 2, width / 4, height / 4);
+
+  strokeWeight(2);
+  line(width / 2, 0, width / 2, height / 1.6);
+  line(width / 2.2, height * 0.385, width / 2.2, height / 1.63);
+  line(width / 1.83, height * 0.385, width / 1.83, height / 1.63);
+  line(width / 2.4, height * 0.405, width / 2.4, height / 1.68);
+  line(width / 1.72, height * 0.405, width / 1.72, height / 1.68);
+
+  line(width * 0.375, height / 2, width * 0.629, height / 2);
+  line(width * 0.39, height / 2.3, width * 0.61, height / 2.3);
+  line(width * 0.39, height / 1.78, width * 0.61, height / 1.78);
+}
+
+
+</script>
+<br><br>
+
+  <h1 style="font-size:35px; color:#353D40; font-family: 'Noto Serif Display', serif;">Proportions by X Variable</h1>
+
+              <h1 style="font-size:20px; color:#353D40; font-family: 'Noto Serif Display', serif; line-height:1.4"><br>These faces were inspired by the style of abstract art faces, kind of like what Picasso did. I really like the style and think it is very interesting. Looking at my project, I tried to do this style. However, instead of using hard code, I made everything reliant upon the X variable. The eyes and mouth will be reliant upon the value of the variable. Making the face change whenever the mouse is clicked was arguably the easiest part. Like the canvas project, the difficult part was finding what to multiply the X value by in order to put things in the right spot all the time.
+              <br><br> Feel free to change the X value and watch the proportions on the faces change.
+              <br><br> I hope you enjoy this Picasso-esque coding project!
+            </h1> <br>
+            
+    
+            <script type="text/p5" data-height="500" data-autoplay data-preview-width="500">
+
+//size of face dependent upon input value for var x
+var mouseCount;
+var x = 50; //determines size of everything
+
+var r;
+var g;
+var b;
+
+function setup() {
+  createCanvas(400, 400);
+  mouseCount = 0;
+}
+
+function draw() {
+  background(220);
+  if (mouseCount === 0) face();
+  if (mouseCount === 1) face2();
+  if (mouseCount === 2) mouseCount = 0;
+  console.log(mouseCount);
+  
+  if(frameCount%120===0){
+    r = random(255);
+    g = random(255);
+    b = random(255);
+  }
+}
+
+function face() {
+  //face
+  fill(7, 135, 13);
+  ellipse(width / 2, height / 2, x * 3, x * 3);
+
+  fill(158, 11, 11);
+  ellipse(width / 2 - x / 2, height / 2 - x / 4, x / 4, x / 4);
+  fill(69, 77, 128);
+  ellipse(width / 2 + x / 2, height / 2 - x / 4, x / 2, x / 2);
+  fill(255, 255, 15);
+  ellipse(width / 2, height / 2 + x / 2, x * 2, x);
+  
+  //hat
+  fill("black");
+  rectMode(CENTER);
+  rect(width/2,height/2-x*1.9,x*3,x);
+  rect(width/2,height/2-x*2.7,x*1.8,x);
+  fill(r,g,b);
+  rect(width/2,height/2-x*2.7,x*1.8,x/4);
+}
+function face2() {
+  rectMode(CENTER);
+  fill(93, 76, 105);
+  rect(width / 2, width / 2, x * 2, x * 3);
+  fill(255);
+  rect(width / 2 - x / 2, height / 2 - x / 4, x, x / 3);
+  fill(0);
+  ellipse(width/2-x/2,height/2-x/4,x/4,x/4);
+  fill(0);
+  rect(width / 2 + x / 2, height / 2 - x / 2, x, x / 3);
+  fill(255);
+  ellipse(width/2+x/2,height/2-x/2,x/4,x/4);
+  fill(255, 0, 0);
+  ellipse(width / 2, height / 2 + x - x / 6, x * 1.5, x);
+}
+
+function mousePressed() {
+  mouseCount++;
+}
+
+
+</script
+
+  <br><hr>
+
+
+  <div id="sketch-div"></div>
+
+  </body>
+  
+</html>
