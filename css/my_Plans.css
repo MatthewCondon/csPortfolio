@@ -148,6 +148,6 @@ body {
   border: 5px solid #353D40;
   margin: 10px;
   padding: 5px;
-  width: 300px;
-  height: 300px;
+    height: auto;
+    width: 450px;
 }
